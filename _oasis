@@ -1,0 +1,20 @@
+Name: psafe3info
+Version: 0.1
+Synopsis: Tool for dumping structure of PasswordSafe (version 3) data files.
+Authors: Marc Butler <mockbutler@gmail.com>
+License: LGPL with Ocaml linking exception
+Description: Dumps data file structure but does not decrypt PasswordSafe version 3 data files.
+Homepage: https://github.com/mockbutler/psafe3info
+
+Plugins: META (0.4), DevFiles (0.4)
+OASISFormat: 0.4
+BuildTools: ocamlbuild, camlp4o
+# Required apparently so that Janestreet core can be used.
+BuildDepends: core, camlp4, threads
+
+Executable "psafe3info"
+  Path: .
+  MainIs: psafe3info.ml
+  BuildDepends:
+    bitstring,
+    bitstring.syntax

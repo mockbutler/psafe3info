@@ -2,14 +2,18 @@
 
 Dead basic utility for dumping the file prologue of Password Safe
 version 3 files. Really just an excuse to try out the Bitstring
-module in [Ocaml][Ocaml].
+module in [Ocaml].
 
-## To Build
+## Build Setup
 
-I have very superficial understanding of the Ocaml tooling,
-so this is how I built it for testing. Cribbed from [Real World Ocaml][RWO].
+The [Oasis][Oasis] build tool is used. Consult the Oasis documentation for how
+to generate build files.
 
-    corebuild -pkg bitstring.syntax,bitstring psafe3info.native
+This application depends on the following packages:
+
+ - Core
+ - Bitstring
 
 [RWO]: https://realworldocaml.org/
 [Ocaml]: http://ocaml.org/
+[Oasis]: https://ocaml.org/learn/tutorials/setting_up_with_oasis.html
